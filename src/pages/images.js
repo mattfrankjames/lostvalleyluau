@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Layout from '../layouts/index';
 import Images from '../components/Images';
+import Headline from '../components/styles/Headline';
+
 import { graphql } from 'gatsby';
 
 export default ({ data }) => {
@@ -10,7 +12,9 @@ export default ({ data }) => {
   //console.log(GalleryImgData);
   return (
     <Layout>
-      <h1>Image Gallery</h1>
+      <Headline>
+        <h2>Image Gallery</h2>
+      </Headline>
       <Images galleryImgs={galleryImgData} />
       <Link to="/">Home</Link>
     </Layout>
@@ -28,8 +32,8 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            sizes(maxWidth: 500) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

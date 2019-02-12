@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../layouts/index';
-
+import Headline from '../components/styles/Headline';
 import Img from 'gatsby-image';
 
 const Inner = styled.section`
@@ -24,9 +24,9 @@ const MapwrapInner = styled.div`
 `;
 export default ({ data }) => (
   <Layout>
-    <span className="heading__wrap">
-      <h2 className="heading__sub">The Dirt</h2>
-    </span>
+    <Headline>
+      <h2>The Dirt</h2>
+    </Headline>
     <Inner>
       <p>
         A 10.5 mile loop with a mixture of flowing singletrack and doubletrack punctuated with rock formations and
@@ -42,9 +42,9 @@ export default ({ data }) => (
     </Inner>
     <Mapwrap>
       <MapwrapInner>
-        <span className="heading__wrap">
-          <h2 className="heading__sub">The Course</h2>
-        </span>
+        <Headline>
+          <h2>The Course</h2>
+        </Headline>
         <Img fluid={data.imageOne.childImageSharp.fluid} />
       </MapwrapInner>
     </Mapwrap>

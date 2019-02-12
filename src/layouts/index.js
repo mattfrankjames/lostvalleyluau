@@ -10,7 +10,7 @@ const Layout = props => {
         <meta charSet="utf-8" />
         <title>Lost Valley Luau - 2019</title>
         <link rel="canonical" href="https://lostvalleyluau.com/" />
-        <link href="https://fonts.googleapis.com/css?family=Kanit:300,800" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Kanit:400,600,800" rel="stylesheet" />
       </Helmet>
       <Header />
       <main>{props.children}</main>

@@ -26,7 +26,7 @@ const Nav = styled.nav`
   display: flex;
   a {
     color: #666666;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0.5rem 1rem;
     text-decoration: none;
     font-size: 1rem;
