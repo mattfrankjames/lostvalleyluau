@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+:root {
+  font-size: 0.9em;
+}
+
+@media screen and (min-width: 37.5em) {
+  :root {
+    font-size: calc(0.9em + 0.5 * ((100vw - 37.5em) / 60));
+  }
+}
+
+@media screen and (min-width: 56em) {
+  :root {
+    font-size: 1.125em;
+  }
+}
+body {
+  font-size: 16px;
+  color: #44464a;
+}
+.header__clip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+.top__clip {
+  position: absolute;
+  top: -8em;
+  left: 0;
+  width: 100%;
+  height: 10vw;
+}
+.heading__wrap {
+  background: #3b3331;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  transform: skew(5deg, 0deg);
+  margin: 1rem;
+}
+.heading__sub {
+  transform: skew(-5deg, 0deg);
+  margin: 0;
+}
+.icon-fb {
+  width: 24px;
+  height: 24px;
+  fill: #3b5998;
+}
+.footer__bottom {
+  background: pink;
+}
