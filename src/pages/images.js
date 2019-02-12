@@ -13,10 +13,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <Headline>
-        <h2>Image Gallery</h2>
+        <h2>Images from Luaus Past..</h2>
       </Headline>
       <Images galleryImgs={galleryImgData} />
-      <Link to="/">Home</Link>
     </Layout>
   );
 };
@@ -32,8 +31,8 @@ export const query = graphql`
           relativePath
           name
           childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
+            sizes(maxWidth: 2000) {
+              ...GatsbyImageSharpSizes
             }
           }
         }

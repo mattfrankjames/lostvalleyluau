@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
-import img from '../images/LostValleyCorner.jpg';
+import img from '../images/gallery/51760952_530918350736088_688081978754334720_n.jpg';
 
 const Header = styled.header`
-  background: url(${img});
+  background: url(${img}), linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -4rem;
@@ -21,6 +21,7 @@ const Nav = styled.nav`
   border-radius: 3px;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.9);
   width: 80vw;
+  max-width: 1080px;
   padding: 0 1.5rem;
   margin: auto;
   display: flex;
@@ -46,15 +47,22 @@ const Nav = styled.nav`
       display: block;
       text-shadow: -2px 2px 0 rgba(0, 0, 0, 0.9);
       transform: skewX(5deg);
+      &:hover {
+        color: white;
+        background: initial;
+        border-radius: initial;
+      }
     }
   }
 `;
 const Headline = styled.h1`
   color: aquamarine;
   font-size: 6rem;
-  margin-top: 0;
+  margin: 0 auto 2rem;
   text-align: center;
   text-shadow: -4px 4px 0 rgba(0, 0, 0, 0.8);
+  width: 80vw;
+  max-width: 1080px;
 `;
 const Subhead = styled.span`
   display: block;

@@ -10,7 +10,7 @@ const Gallery = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: minmax(26vh, 190px);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1em auto;
 `;
 
 const PreviewButton = styled.button`
@@ -29,33 +29,77 @@ class Images extends Component {
 
     this.state = {
       showLightbox: false,
-      selectedImage: null
+      selectedImage: 0
     };
   }
+  componentDidMount = () => {
+    window.addEventListener('keyup', this.handleKeyUp, false);
+  };
+
+  componentWillUnmount = () => {
+    window.removeEventListener('keyup', this.handleKeyUp, false);
+  };
+
+  handleClick = (e, index) => {
+    e.preventDefault();
+    this.setState({ showLightbox: !this.state.showLightbox, selectedImage: index });
+  };
+
+  closeModal = () => {
+    this.setState({ showLightbox: false });
+  };
+
+  goBack = () => {
+    this.setState({ selectedImage: this.state.selectedImage - 1 });
+  };
+
+  goForward = () => {
+    this.setState({ selectedImage: this.state.selectedImage + 1 });
+  };
+
+  handleKeyUp = e => {
+    e.preventDefault();
+    const { keyCode } = e;
+    if (this.state.showLightbox) {
+      if (keyCode === 37) {
+        // Left Arrow Key
+        if (this.state.selectedImage > 0) {
+          this.setState({ selectedImage: this.state.selectedImage - 1 });
+        }
+      }
+      if (keyCode === 39) {
+        // Right Arrow Key
+        if (this.state.selectedImage < this.props.images.length - 1) {
+          this.setState({ selectedImage: this.state.selectedImage + 1 });
+        }
+      }
+      if (keyCode === 27) {
+        // Escape key
+        this.setState({ showLightbox: false });
+      }
+    }
+  };
 
   render() {
     const { galleryImgs } = this.props;
     const { showLightbox, selectedImage } = this.state;
     return (
       <section>
-        <h2>Images from Luaus Past..</h2>
         <Gallery>
-          {galleryImgs.map(galleryImg => (
+          {galleryImgs.map((galleryImg, i) => (
             <PreviewButton
-              key={galleryImg.node.childImageSharp.fluid.src}
+              key={galleryImg.node.childImageSharp.sizes.src}
               type="button"
               onClick={() => this.setState({ showLightbox: true, selectedImage: galleryImg })}
             >
-              <Img fluid={galleryImg.node.childImageSharp.fluid} />
+              <Img sizes={galleryImg.node.childImageSharp.sizes} />
             </PreviewButton>
           ))}
         </Gallery>
-        <button type="button" onClick={() => this.setState({ showLightbox: true })}>
-          Show Dialog
-        </button>
+
         {showLightbox && (
           <Dialog>
-            <Img fluid={selectedImage.node.childImageSharp.fluid} />
+            <Img sizes={selectedImage.node.childImageSharp.sizes} />
             <button type="button" onClick={() => this.setState({ showLightbox: false })}>
               Close
             </button>
