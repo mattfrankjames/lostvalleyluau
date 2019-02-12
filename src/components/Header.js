@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import img from '../images/gallery/51760952_530918350736088_688081978754334720_n.jpg';
 
 const Header = styled.header`
-  background: url(${img}), linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  background: url(${img});
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -4rem;
@@ -12,6 +12,15 @@ const Header = styled.header`
   position: relative;
   min-height: 49vmin;
   transform: skewY(-5deg);
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
 `;
 const HeaderWrap = styled.div`
   transform: skewY(5deg);
