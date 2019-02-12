@@ -1,8 +1,7 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Layout from '../layouts/index';
-import { graphql } from 'gatsby';
+
 import Img from 'gatsby-image';
 
 const Inner = styled.section`
@@ -25,7 +24,7 @@ const MapwrapInner = styled.div`
 `;
 export default ({ data }) => (
   <Layout>
-    <span class="heading__wrap">
+    <span className="heading__wrap">
       <h2 className="heading__sub">The Dirt</h2>
     </span>
     <Inner>

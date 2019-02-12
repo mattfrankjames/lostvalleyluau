@@ -78,7 +78,7 @@ const Heading = () => {
             <a
               className="standalone"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               href="https://legacy.usacycling.org/register/2019-309"
             >
               Register
