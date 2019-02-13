@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Layout from '../layouts/index';
 import Images from '../components/Images';
 import Headline from '../components/styles/Headline';
@@ -24,7 +23,7 @@ export const query = graphql`
   query allImgsQuery {
     GalleryImgs: allFile(
       sort: { order: ASC, fields: [absolutePath] }
-      filter: { relativePath: { regex: "gallery/.*.jpg/" } }
+      filter: { relativePath: { regex: "images/gallery/.*.jpg/" } }
     ) {
       edges {
         node {

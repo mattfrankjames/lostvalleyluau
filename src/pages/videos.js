@@ -23,6 +23,7 @@ const Videos = () => {
           width="560"
           height="315"
           src="https://www.youtube.com/embed/0QM3YGECRUI"
+          title="Lost Valley Luau video 1"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -31,6 +32,7 @@ const Videos = () => {
           width="560"
           height="315"
           src="https://www.youtube.com/embed/jWk0t-lgjFw"
+          title="Lost Valley Luau video 2"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -39,6 +41,7 @@ const Videos = () => {
           width="560"
           height="315"
           src="https://www.youtube.com/embed/MvjWvNIaUi0"
+          title="Lost Valley Luau video 3"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -47,6 +50,7 @@ const Videos = () => {
           width="560"
           height="315"
           src="https://www.youtube.com/embed/U1zoPvyU0nI"
+          title="Lost Valley Luau video 4"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -55,6 +59,7 @@ const Videos = () => {
           width="560"
           height="315"
           src="https://www.youtube.com/embed/vZYkyfBY26o"
+          title="Lost Valley Luau video 5"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -63,6 +68,7 @@ const Videos = () => {
           width="560"
           height="315"
           src="https://www.youtube.com/embed/_31YzxBxUP4"
+          title="Lost Valley Luau video 6"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen

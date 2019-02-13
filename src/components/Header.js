@@ -29,8 +29,8 @@ const Nav = styled.nav`
   background: pink;
   border-radius: 3px;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.9);
-  width: 80vw;
-  max-width: 1080px;
+  width: 95vw;
+  max-width: 860px;
   padding: 0 1.5rem;
   margin: auto;
   display: flex;
@@ -70,8 +70,9 @@ const Headline = styled.h1`
   margin: 0 auto 2rem;
   text-align: center;
   text-shadow: -4px 4px 0 rgba(0, 0, 0, 0.8);
-  width: 80vw;
-  max-width: 1080px;
+  width: 95vw;
+  max-width: 860px;
+  line-height: 1;
 `;
 const Subhead = styled.span`
   display: block;
