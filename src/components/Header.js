@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 import img from '../images/gallery/51760952_530918350736088_688081978754334720_n.jpg';
+import icon from '../images/faceicon.svg';
 
 const Header = styled.header`
   background: url(${img});
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -4rem;
-  padding-top: 6rem;
+  padding-top: 8rem;
   position: relative;
   min-height: 49vmin;
   transform: skewY(-5deg);
@@ -84,6 +85,7 @@ const Subhead = styled.span`
 const Heading = () => {
   return (
     <Header>
+      <img className="header-icon" src={icon} />
       <HeaderWrap>
         <Headline>
           Lost Valley Luau<Subhead>Sunday, March 31 - 2019</Subhead>
@@ -104,9 +106,6 @@ const Heading = () => {
           </span>
         </Nav>
       </HeaderWrap>
-      {/* <svg className="header__clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <polygon fill="white" points="0,100 100,0 100,100" />
-      </svg> */}
     </Header>
   );
 };

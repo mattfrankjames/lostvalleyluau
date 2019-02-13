@@ -11,11 +11,14 @@ const Inner = styled.section`
     width: 95%;
     max-width: 40rem;
     margin: 0 auto 1rem;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
   }
 `;
 const Mapwrap = styled.section`
   background: aquamarine;
-  padding: 5rem;
+  padding: 1rem 5rem 5rem;
   position: relative;
   transform: skewY(-5deg);
 `;
@@ -24,7 +27,7 @@ const MapwrapInner = styled.div`
   transform: skewY(5deg);
   div {
     width: 95%;
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
   }
 `;
@@ -46,7 +49,25 @@ const InnerBG = styled(Inner)`
     z-index: -5;
   }
 `;
-
+const Columns = styled.section`
+  > div {
+    width: 95%;
+    max-width: 860px;
+    margin: 1em auto;
+    @media (min-width: 600px) {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+`;
 export default ({ data }) => (
   <Layout>
     <Headline>
@@ -71,13 +92,19 @@ export default ({ data }) => (
           <h2>The Course</h2>
         </Headline>
         <Img fluid={data.imageOne.childImageSharp.fluid} />
+        <a
+          href="https://gorctrails.com/sites/default/files/media/Media%20Root/lost_valley_1.pdf"
+          type="application/pdf; length=614380"
+        >
+          Download Map
+        </a>
       </MapwrapInner>
     </Mapwrap>
     <InnerBG>
       <Headline>
         <h2>Start Times and Entry</h2>
       </Headline>
-      <Table class="responsive-table">
+      <Table className="responsive-table">
         <thead>
           <tr>
             <th scope="col">Class</th>
@@ -126,12 +153,58 @@ export default ({ data }) => (
         </tbody>
       </Table>
     </InnerBG>
+    <Columns>
+      <Headline>
+        <h2>The Goods</h2>
+      </Headline>
+      <div>
+        <div className="card">
+          <Img fluid={data.imageTwo.childImageSharp.fluid} />
+          <h3>Prize List for Overall</h3>
+          <ul>
+            <li>Cat 1 - Cash to top 3</li>
+            <li>Cat 2 - Prizes to top 3</li>
+            <li>Cat 3, Juniors - Prizes to top 3</li>
+            <li>Marathon - Cash to top 3</li>
+            <li>eBike - Prizes to top 3</li>
+          </ul>
+        </div>
+        <div className="card">
+          <Img fluid={data.imageThree.childImageSharp.fluid} />
+          <h3>The Rules</h3>
+          <p>
+            Events are subject to weather. Annual USAC License required for Cat 1 and Pro only, optional for cat 2 and
+            3. Helmets must be worn at all times while on a bike at USAC events. Promoter reserves the right to cancel /
+            combine events and alter prize lists as necessary. Promoter reserves the right to adjust start times and
+            mileage.
+          </p>
+          <p>
+            Have Fun. This isn’t the World Championships. You’re outside, enjoy it. Help each other. Look out for each
+            other. Enjoy life. Get dirty. No whining. No explanation needed.
+          </p>
+        </div>
+      </div>
+    </Columns>
   </Layout>
 );
 
 export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "lost_valley_1-1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageTwo: file(relativePath: { eq: "gallery/51626396_618039795322140_823983007516852224_n.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageThree: file(relativePath: { eq: "gallery/51754563_977468915784592_5158553217700724736_n.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

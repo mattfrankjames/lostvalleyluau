@@ -47,21 +47,14 @@ body {
   width: 100%;
   height: 10vw;
 }
-.heading__wrap {
-  background: #3b3331;
-  color: white;
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  transform: skew(5deg, 0deg);
-  margin: 1rem;
-}
-.heading__sub {
-  transform: skew(-5deg, 0deg);
-  margin: 0;
+.header-icon {
+  position: absolute;
+  top: 16px;
+  width: 80px;
 }
 .icon-fb {
-  width: 24px;
-  height: 24px;
+  width: 64px;
+  height: 64px;
   fill: #3b5998;
 }
 .footer__bottom {

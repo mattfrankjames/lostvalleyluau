@@ -3,15 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { Dialog } from '@reach/dialog';
 import '@reach/dialog/styles.css';
-
-const Gallery = styled.div`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(26vh, 190px);
-  max-width: 1200px;
-  margin: 1em auto;
-`;
+import Gallery from './styles/Gallery';
 
 const PreviewButton = styled.button`
   background: transparent;

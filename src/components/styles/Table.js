@@ -8,6 +8,9 @@ const Table = styled.table`
   table-layout: fixed;
   max-width: 40rem;
   margin: 2rem auto;
+  th {
+    font-weight: 600;
+  }
   td,
   th {
     padding: 0.5em 1em;
@@ -39,7 +42,6 @@ const Table = styled.table`
   td {
     border-bottom: 1px solid #696b6e;
     height: auto;
-    //min-height: 7em;
     vertical-align: middle;
     text-align: right;
   }
