@@ -9,11 +9,21 @@ const PreviewButton = styled.button`
   background: transparent;
   border: none;
   overflow: hidden;
+  cursor: pointer;
   div {
     height: 100%;
   }
   /* padding: 0;
   margin: 0; */
+`;
+const CloseButton = styled.button`
+  font-size: 1rem;
+  color: #00698c;
+  cursor: pointer;
+  border: 1px solid;
+  background: none;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.25rem;
 `;
 class Images extends Component {
   constructor(props) {
@@ -88,13 +98,14 @@ class Images extends Component {
             </PreviewButton>
           ))}
         </Gallery>
+        <em>Photos by Marcus Janzow</em>
 
         {showLightbox && (
           <Dialog>
+            <CloseButton type="button" onClick={() => this.setState({ showLightbox: false })}>
+              &times; Close
+            </CloseButton>
             <Img sizes={selectedImage.node.childImageSharp.sizes} />
-            <button type="button" onClick={() => this.setState({ showLightbox: false })}>
-              Close
-            </button>
           </Dialog>
         )}
       </section>

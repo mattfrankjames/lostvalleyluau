@@ -12,7 +12,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Headline>
-        <h2>Images from Luaus Past..</h2>
+        <h2>Images</h2>
       </Headline>
       <Images galleryImgs={galleryImgData} />
     </Layout>

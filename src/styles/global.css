@@ -30,7 +30,6 @@ img {
   }
 }
 body {
-  font-size: 16px;
   color: #44464a;
 }
 .header__clip {
@@ -59,4 +58,5 @@ body {
 }
 .footer__bottom {
   background: pink;
+  text-align: right;
 }

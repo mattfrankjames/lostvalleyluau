@@ -10,13 +10,16 @@ const Gallery = styled.div`
   /* grid-auto-rows: minmax(26vh, 190px); */
   max-width: 1200px;
   margin: 1em auto;
+  iframe {
+    margin: auto;
+  }
 `;
 
 const Videos = () => {
   return (
     <Layout>
       <Headline>
-        <h2>Videos from Luaus Past...</h2>
+        <h2>Videos</h2>
       </Headline>
       <Gallery>
         <iframe
