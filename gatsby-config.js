@@ -21,20 +21,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-embed-youtube',
-            options: {
-              width: 800,
-              height: 400
-            }
-          }
-        ]
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `lost-valley-luau`,
@@ -45,7 +31,19 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/faceicon.svg` // This path is relative to the root of the site.
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Kanit`,
+            variants: [`400`, `600`, `800`]
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-offline`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

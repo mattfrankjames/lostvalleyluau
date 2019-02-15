@@ -60,3 +60,16 @@ body {
   background: pink;
   text-align: right;
 }
+.footer__bottom a {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+[data-reach-dialog-content] {
+  width: 90vw!important;
+}
+@media (min-width: 768px) {
+  [data-reach-dialog-content] {
+  width: 50vw!important;
+  }
+}

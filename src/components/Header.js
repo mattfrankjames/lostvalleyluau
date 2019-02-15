@@ -36,7 +36,7 @@ const Nav = styled.nav`
   margin: auto;
   display: flex;
   a {
-    color: #666666;
+    color: #545353;
     font-weight: 600;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -85,7 +85,7 @@ const Subhead = styled.span`
 const Heading = () => {
   return (
     <Header>
-      <img className="header-icon" src={icon} />
+      <img className="header-icon" alt="" src={icon} />
       <HeaderWrap>
         <Headline>
           Lost Valley Luau<Subhead>Sunday, March 31 - 2019</Subhead>

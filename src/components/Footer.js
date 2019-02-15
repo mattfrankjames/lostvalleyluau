@@ -9,7 +9,7 @@ const Sponsors = styled.div`
   /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem; */
-
+  text-align: center;
   width: 95%;
   max-width: 900px;
   margin: 0 auto;
@@ -18,6 +18,7 @@ const Sponsors = styled.div`
     display: inline-block;
     margin: 1rem 1rem 1rem 0;
     vertical-align: middle;
+    filter: drop-shadow(5px 5px 5px #000000);
     img {
       object-fit: contain;
     }
@@ -27,6 +28,7 @@ const Sponsors = styled.div`
 const Footer = styled.footer`
   position: relative;
   background: url(${img});
+  background-size: cover;
   &::before {
     content: '';
     background: rgba(255, 255, 255, 0.2);
@@ -73,6 +75,14 @@ export default () => (
             }
           }
         }
+      imageFive: file(relativePath: { eq: "sponsor-logos/chaney.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+
       }
     `}
     render={data => (
@@ -82,10 +92,11 @@ export default () => (
             <h2>Presented by:</h2>
           </Headline>
           <Sponsors>
-            <Img fluid={data.imageTwo.childImageSharp.fluid} />
-            <Img fluid={data.imageThree.childImageSharp.fluid} />
-            <Img fluid={data.imageOne.childImageSharp.fluid} />
-            <Img fluid={data.imageFour.childImageSharp.fluid} />
+            <Img fluid={data.imageTwo.childImageSharp.fluid} alt="SBR Rokr Pro"/>
+            <Img fluid={data.imageThree.childImageSharp.fluid} alt="Quantum Racing Development"/>
+            <Img fluid={data.imageOne.childImageSharp.fluid} alt="The Hub Bicycle Company"/>
+            <Img fluid={data.imageFour.childImageSharp.fluid} alt="stlbiking.com"/>
+            <Img fluid={data.imageFive.childImageSharp.fluid} alt="Chaney Windows and Doors"/>
           </Sponsors>
         </div>
         <div className="footer__bottom">

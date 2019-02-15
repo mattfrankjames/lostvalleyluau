@@ -94,7 +94,7 @@ class Images extends Component {
               type="button"
               onClick={() => this.setState({ showLightbox: true, selectedImage: galleryImg })}
             >
-              <Img sizes={galleryImg.node.childImageSharp.sizes} />
+              <Img sizes={galleryImg.node.childImageSharp.sizes} alt=""/>
             </PreviewButton>
           ))}
         </Gallery>
