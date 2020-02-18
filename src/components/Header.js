@@ -99,7 +99,7 @@ const Heading = () => {
               className='standalone'
               target='_blank'
               rel='noopener noreferrer'
-              href='https://legacy.usacycling.org/register/2020-1107'
+              href='https://www.bikereg.com/lost-valley-luau'
             >
               Register
             </a>
