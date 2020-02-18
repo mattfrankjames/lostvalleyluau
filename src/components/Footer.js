@@ -75,7 +75,7 @@ export default () => (
             }
           }
         }
-      imageFive: file(relativePath: { eq: "sponsor-logos/chaney.png" }) {
+        imageFive: file(relativePath: { eq: "sponsor-logos/chaney.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
@@ -83,15 +83,13 @@ export default () => (
           }
         }
 
-      }
-      imageSix: file(relativePath: { eq: "sponsor-logos/Specialized-logo-vector.png" }) {
+        imageSix: file(relativePath: { eq: "sponsor-logos/Specialized-logo-vector.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-
       }
     `}
     render={data => (
