@@ -85,21 +85,21 @@ const Subhead = styled.span`
 const Heading = () => {
   return (
     <Header>
-      <img className="header-icon" alt="" src={icon} />
+      <img className='header-icon' alt='' src={icon} />
       <HeaderWrap>
         <Headline>
-          Lost Valley Luau<Subhead>Sunday, March 31 - 2019</Subhead>
+          Lost Valley Luau<Subhead>Sunday, March 29 - 2020</Subhead>
         </Headline>
         <Nav>
-          <Link to="/">Home</Link>
-          <Link to="/images">Images</Link>
-          <Link to="/videos">Videos</Link>
+          <Link to='/'>Home</Link>
+          <Link to='/images'>Images</Link>
+          <Link to='/videos'>Videos</Link>
           <span>
             <a
-              className="standalone"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://legacy.usacycling.org/register/2019-309"
+              className='standalone'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://legacy.usacycling.org/register/2020-1107'
             >
               Register
             </a>

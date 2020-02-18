@@ -84,32 +84,42 @@ export default () => (
         }
 
       }
+      imageSix: file(relativePath: { eq: "sponsor-logos/Specialized-logo-vector.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+
+      }
     `}
     render={data => (
       <Footer>
-        <div className="footer--top">
+        <div className='footer--top'>
           <Headline>
             <h2>Presented by:</h2>
           </Headline>
           <Sponsors>
-            <Img fluid={data.imageTwo.childImageSharp.fluid} alt="SBR Rokr Pro"/>
-            <Img fluid={data.imageThree.childImageSharp.fluid} alt="Quantum Racing Development"/>
-            <Img fluid={data.imageOne.childImageSharp.fluid} alt="The Hub Bicycle Company"/>
-            <Img fluid={data.imageFour.childImageSharp.fluid} alt="stlbiking.com"/>
-            <Img fluid={data.imageFive.childImageSharp.fluid} alt="Chaney Windows and Doors"/>
+            <Img fluid={data.imageTwo.childImageSharp.fluid} alt='SBR Rokr Pro' />
+            <Img fluid={data.imageThree.childImageSharp.fluid} alt='Quantum Racing Development' />
+            <Img fluid={data.imageOne.childImageSharp.fluid} alt='The Hub Bicycle Company' />
+            <Img fluid={data.imageFour.childImageSharp.fluid} alt='stlbiking.com' />
+            <Img fluid={data.imageFive.childImageSharp.fluid} alt='Chaney Windows and Doors' />
+            <Img fluid={data.imageSix.childImageSharp.fluid} alt='Specialized Bicycle Components' />
           </Sponsors>
         </div>
-        <div className="footer__bottom">
+        <div className='footer__bottom'>
           <a
-            aria-label="link to facebook page"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.facebook.com/events/2290171741011071/"
+            aria-label='link to facebook page'
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://www.facebook.com/events/2290171741011071/'
           >
-            <svg className="icon-fb" viewBox="0 0 24 24">
+            <svg className='icon-fb' viewBox='0 0 24 24'>
               <path
-                fill="#000000"
-                d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z"
+                fill='#000000'
+                d='M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z'
               />
             </svg>
           </a>
