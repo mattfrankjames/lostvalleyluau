@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 import img from '../images/gallery/51760952_530918350736088_688081978754334720_n.jpg';
 import icon from '../images/faceicon.svg';
+import Warning from './Warning';
 
 const Header = styled.header`
   background: url(${img});
@@ -83,30 +84,38 @@ const Subhead = styled.span`
   text-align: right;
 `;
 const Heading = () => {
+  const [alert, setAlert] = useState(true);
+  let alertBanner;
+  if (alert === true) {
+    alertBanner = <Warning />;
+  }
   return (
-    <Header>
-      <img className='header-icon' alt='' src={icon} />
-      <HeaderWrap>
-        <Headline>
-          Lost Valley Luau<Subhead>Sunday, March 29 - 2020</Subhead>
-        </Headline>
-        <Nav>
-          <Link to='/'>Home</Link>
-          <Link to='/images'>Images</Link>
-          <Link to='/videos'>Videos</Link>
-          <span>
-            <a
-              className='standalone'
-              target='_blank'
-              rel='noopener noreferrer'
-              href='https://www.bikereg.com/lost-valley-luau'
-            >
-              Register
-            </a>
-          </span>
-        </Nav>
-      </HeaderWrap>
-    </Header>
+    <>
+      {alertBanner}
+      <Header>
+        <img className='header-icon' alt='' src={icon} />
+        <HeaderWrap>
+          <Headline>
+            Lost Valley Luau<Subhead>Sunday, March 29 - 2020</Subhead>
+          </Headline>
+          <Nav>
+            <Link to='/'>Home</Link>
+            <Link to='/images'>Images</Link>
+            <Link to='/videos'>Videos</Link>
+            <span>
+              <a
+                className='standalone'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://www.bikereg.com/lost-valley-luau'
+              >
+                Register
+              </a>
+            </span>
+          </Nav>
+        </HeaderWrap>
+      </Header>
+    </>
   );
 };
 
